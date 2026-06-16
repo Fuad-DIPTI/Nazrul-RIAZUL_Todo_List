@@ -5,7 +5,7 @@
 <div class="container py-5">
   <div class="row justify-content-center">
     <div class="col-md-5">
-      <div class="card bg-body-tertiary border border-secondary-subtle shadow p-4">
+      <div class="login-card">
         <h4 class="text-center text-info fw-bold mb-4">{{ action|default:"Submit Form" }}</h4>
         
         <form method="post" novalidate action="">
@@ -17,7 +17,9 @@
               {% if field.errors %}<div class="text-danger small mt-1">{{ field.errors|striptags }}</div>{% endif %}
             </div>
           {% endfor %}
-          <button type="submit" class="btn btn-info w-100 text-dark fw-bold mt-2">Confirm {{ action }}</button>
+          <button type="submit" class="btn login-btn w-100 mt-3">
+    {{ action }}
+</button>
         </form>
 
         <div class="text-center mt-3 small">

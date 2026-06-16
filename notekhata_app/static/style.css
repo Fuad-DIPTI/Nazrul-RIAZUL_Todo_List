@@ -2,6 +2,65 @@
     background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
 }
 
+/* Login/Register Card */
+.login-card {
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.3);
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.login-card h4 {
+    color: #60a5fa;
+    margin-bottom: 25px;
+}
+
+/* Labels */
+.login-card label {
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+/* Input Fields */
+.login-card input {
+    width: 100%;
+    padding: 12px 15px;
+    background: #334155;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    color: white;
+    transition: .3s;
+}
+
+.login-card input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 10px rgba(99,102,241,.4);
+}
+
+/* Button */
+.login-btn {
+    background: linear-gradient(135deg,#6366f1,#8b5cf6);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* Page Background */
+body {
+    background: #0f172a;
+}
+
+
 
 .gradient-footer {
     background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
