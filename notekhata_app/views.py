@@ -248,3 +248,11 @@ def task_delete(request, task_id):
         'cancel_url': reverse('board_detail', args=[board_id]),
     }
     return render(request, 'baseformdelete.html', context)
+
+@login_required
+def task_complete(request, task_id):
+    task = get_object_or_404(Task, id=task_id, list__board__user=request.user)
+    task.is_completed = True
+    task.save()
+    messages.success(request, f"Task '{task.title}' marked as completed.")
+    return redirect('board_detail', board_id=task.list.board.id)
