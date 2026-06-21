@@ -22,12 +22,12 @@
     {% if request.path == '/' %}
     <div class="parallax" data-speed="0.5" data-image="https://picsum.photos/id/60/1000/600">
         <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
-        <div class="text-center p-5 position-relative z-2">
+        <div class="text-center px-3 p-5 position-relative z-2">
             <span class="text-white fw-bold">Welcome to Notekhata</span>
-            <h1 class="display-3 fw-bold mb-4 mt-2">Your Daily Notes</h1>
-            <div class="d-flex justify-content-center flex-wrap gap-2">
-                <a href="{% url 'register' %}" class="btn btn-warning btn-lg rounded-pill px-5">Register</a>
-                <a href="{% url 'login' %}" class="btn btn-outline-warning btn-lg rounded-pill px-5">Login</a>
+            <h1 class="display-4 display-md-3 fw-bold mb-4 mt-2">Your Daily Notes</h1>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+                <a href="{% url 'register' %}" class="btn btn-warning btn-lg rounded-pill px-4">Register</a>
+                <a href="{% url 'login' %}" class="btn btn-outline-warning btn-lg rounded-pill px-4">Login</a>
             </div>
         </div>
     </div>
@@ -41,22 +41,22 @@
     <footer class="gradient-footer text-white py-5 mt-auto">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-12 text-center text-lg-start">
                     <h5 class="fw-bold mb-3">Notekhata</h5>
                     <p class="opacity-75">Creating beautiful digital experiences for forward-thinking people.</p>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-lg-2 col-md-6 text-center text-lg-start">
                     <h6 class="fw-bold mb-3">Quick Links</h6>
                     <ul class="list-unstyled">
                         <li><a href="#" class="footer-link">About Us</a></li>
                         <li><a href="#" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-12 text-center text-lg-start">
                     <h6 class="fw-bold mb-3">Newsletter</h6>
-                    <div class="input-group">
+                    <div class="input-group flex-column flex-sm-row">
                         <input type="email" class="form-control newsletter-input" placeholder="Enter your email">
-                        <button class="btn btn-light mt-3" type="button">Subscribe</button>
+                        <button class="btn btn-light mt-2 mt-sm-0" type="button">Subscribe</button>
                     </div>
                 </div>
             </div>

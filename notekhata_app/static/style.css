@@ -15,6 +15,33 @@ body {
 .navbar {
     background: linear-gradient(135deg, #b5b5d5 0%, #8b5cf6 100%);
 }
+.nav-link-custom {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-link-custom:hover {
+    color: #ffc107;
+}
+
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .navbar-collapse .btn {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .navbar-collapse .nav-link-custom {
+        display: block;
+        padding: 8px 0;
+    }
+}
 
 /* Hero Section - Parallax (Unified) */
 .parallax {

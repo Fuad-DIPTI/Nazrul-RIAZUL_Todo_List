@@ -1,32 +1,60 @@
 <nav class="navbar navbar-expand-lg custom-navbar shadow-sm sticky-top">
-  <div class="container">
+    <div class="container">
+
+```
     <a class="navbar-brand fw-bold text-white" href="{% url 'home' %}">
-      <i class="fa-solid fa-book-open me-2"></i>Notekhata
+        <i class="fa-solid fa-book-open me-2"></i>Notekhata
     </a>
 
-    <div class="ms-auto d-flex align-items-center gap-3">
-      {% if user.is_authenticated %}
-        <a class="nav-link-custom" href="{% url 'dashboard' %}">
-          <i class="fa-solid fa-table-columns me-1"></i> Dashboard
-        </a>
+    <button class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-white"></i>
+    </button>
 
-        <span class="text-light small">
-          <i class="fa-solid fa-user me-1"></i>{{ user.username }}
-        </span>
+    <div class="collapse navbar-collapse" id="navbarContent">
 
-        <a class="btn btn-danger rounded-pill px-4" href="{% url 'logout' %}">
-          Logout
-        </a>
+        <div class="ms-auto d-flex flex-column flex-lg-row align-items-center gap-3 mt-3 mt-lg-0">
 
-      {% else %}
-        <a class="nav-link-custom" href="{% url 'login' %}">
-          Login
-        </a>
+            {% if user.is_authenticated %}
 
-        <a class="btn register-btn rounded-pill px-4" href="{% url 'register' %}">
-          Register
-        </a>
-      {% endif %}
+                <a class="nav-link-custom" href="{% url 'dashboard' %}">
+                    <i class="fa-solid fa-table-columns me-1"></i>
+                    Dashboard
+                </a>
+
+                <span class="text-light small">
+                    <i class="fa-solid fa-user me-1"></i>
+                    {{ user.username }}
+                </span>
+
+                <a class="btn btn-danger rounded-pill px-4"
+                   href="{% url 'logout' %}">
+                    Logout
+                </a>
+
+            {% else %}
+
+                <a class="nav-link-custom" href="{% url 'login' %}">
+                    Login
+                </a>
+
+                <a class="btn register-btn rounded-pill px-4"
+                   href="{% url 'register' %}">
+                    Register
+                </a>
+
+            {% endif %}
+
+        </div>
+
     </div>
-  </div>
+
+</div>
+```
+
 </nav>
